@@ -1,43 +1,26 @@
-# Pothi & Page — static e-book storefront
+# Wisebinding — static e-book storefront
 
-A fast, lightweight store for selling downloadable e-books and guides. No database, no accounts: buy buttons link straight to your hosted checkout (Razorpay Payment Pages, Stripe Payment Links, Gumroad, Lemon Squeezy…), which takes payment and emails the PDF.
+Anamika Yadav’s general-interest e-book store. No database, accounts or hosted e-book files: buy buttons link to hosted checkout.
 
 ## Edit the store
 
-| What | Where |
-| --- | --- |
-| Brand name, tagline, email, currency, refund days, home page copy, FAQs, about, newsletter, analytics | `src/site.ts` |
-| Products, bundles, prices, checkout links | `src/products.ts` |
-| Colours, fonts, spacing | `src/styles.css` |
-| Product photos | `public/images/` |
+- Brand, copy, email and settings: `src/site.ts`.
+- Products, prices, authors and checkout URLs: `src/products.ts`.
+- Design tokens: `src/styles.css`.
+- Media: use Lovable Assets and import its `.asset.json` pointers.
 
-### Add a product
+Add one product object to list it in the catalogue, search, category filters, its detail page, sitemap and JSON-LD. Describe each title’s own format and audience rather than narrowing the store as a whole.
 
-1. Put a photo in `public/images/` (WebP, ~1200px wide, plus a ~640px `-640.webp` thumbnail).
-2. Copy one object in the `products` array in `src/products.ts`, give it a new `slug`, and fill in the fields.
-3. Paste your checkout link into `buyUrl`.
+The current title is **Crack Your Next Interview with AI**, by Anamika Yadav: 195 pages, ₹499 (original price ₹1,999), with its real Gumroad checkout URL. No PDF is stored here.
 
-It appears on the home page, the products page, its own page at `/product/<slug>`, the sitemap and search results automatically.
+Support links open Gmail compose with the recipient prefilled. Buyers may need to sign in to Gmail. Analytics and newsletter signup are disabled. No refund page or promises are displayed.
 
-### Set your checkout links
-
-Create a payment link for each product in your checkout provider, set it to deliver the PDF, and paste the URL into that product's `buyUrl` (and the bundle's `buyUrl`). The placeholders start with `https://example.com/checkout/`.
-
-### Before going live
-
-- Set `url` in `src/site.ts` to your domain (enables absolute share links and sitemap URLs).
-- Replace the placeholder Privacy, Terms and Refund pages in `src/routes/privacy.tsx`, `terms.tsx`, `refund.tsx`.
-- Add real testimonials only once you have them (`testimonials` in `src/site.ts`).
-- Optional: set `newsletter.endpoint` (e.g. Buttondown, ConvertKit form URL) and `analytics.enabled` + `analytics.domain` for Plausible.
-
-## Run locally
+## Run and publish
 
 ```bash
 bun install
-bun run dev      # http://localhost:8080
-bunx vitest run  # store rule tests
+bun run dev
+bunx vitest run
 ```
 
-## Deploy
-
-Publish from Lovable with one click, or build with `bun run build` and deploy to Cloudflare Pages / Workers.
+Publish from Lovable. Set `site.url` to the actual public domain once available; never use a repository URL as the store domain.

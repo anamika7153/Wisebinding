@@ -10,7 +10,7 @@ export const Route = createFileRoute("/products")({
   head: () =>
     seo({
       title: "All e-books & guides",
-      description: `Browse every e-book and guide from ${site.brand}. Instant PDF download, secure checkout and a ${site.refundDays}-day refund guarantee.`,
+      description: `Browse every e-book and guide from ${site.brand}. Explore the collection and buy through hosted checkout.`,
       path: "/products",
     }),
   component: ProductsPage,
@@ -22,7 +22,7 @@ function ProductsPage() {
       <PageIntro
         eyebrow="Products"
         title="All e-books & guides"
-        text="Filter by topic or search by name. Every guide is a PDF you can read on any device."
+        text="Discover your next read, across topics and interests."
       />
       <section className="container-page mt-8">
         <ProductBrowser />

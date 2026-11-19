@@ -14,7 +14,7 @@ import { SectionHeading } from "@/components/store/Section";
 import { TrustStrip } from "@/components/store/TrustStrip";
 import { seo } from "@/lib/seo";
 import { products } from "@/products";
-import { fill, site } from "@/site";
+import { fill, site, supportUrl } from "@/site";
 
 export const Route = createFileRoute("/")({
   head: () =>
@@ -22,6 +22,7 @@ export const Route = createFileRoute("/")({
       title: site.brand,
       description: `${site.tagline} ${site.hero.subheadline}`.slice(0, 158),
       path: "/",
+      image: products[0]?.images[0]?.src,
     }),
   component: Home,
 });
@@ -70,8 +71,8 @@ function Home() {
       <section aria-labelledby="products-title" className="container-page reveal mt-24" id="products">
         <SectionHeading
           eyebrow="The collection"
-          title="Every guide, in one place."
-          text="Short, practical reads. Each one solves one real problem."
+          title="The Wisebinding collection"
+          text="Explore the e-books currently available."
           id="products-title"
         />
         <div className="mt-8">
@@ -92,7 +93,7 @@ function Home() {
             text={
               <>
                 Still unsure? Email{" "}
-                <a className="text-primary underline underline-offset-4" href={`mailto:${site.supportEmail}`}>
+                <a className="text-primary underline underline-offset-4" href={supportUrl()} target="_blank" rel="noopener noreferrer">
                   {site.supportEmail}
                 </a>
                 .

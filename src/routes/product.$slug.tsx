@@ -7,7 +7,7 @@ import { ProductCard } from "@/components/store/ProductCard";
 import { SectionHeading } from "@/components/store/Section";
 import { absoluteUrl, seo } from "@/lib/seo";
 import { getProduct, getRelatedProducts, type Product } from "@/products";
-import { fill, site } from "@/site";
+import { site } from "@/site";
 
 export const Route = createFileRoute("/product/$slug")({
   loader: ({ params }) => {
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/product/$slug")({
     }
     const base = seo({
       title: product.name,
-      description: `${product.tagline} ${product.format}. Instant download, ${site.refundDays}-day refund guarantee.`.slice(0, 158),
+      description: `${product.tagline} ${product.format}. By ${product.author ?? site.about.founderName}.`.slice(0, 158),
       path: `/product/${params.slug}`,
       image: product.images[0]?.src,
       type: "product",
@@ -88,6 +88,7 @@ function ProductPage() {
         <div className="fade-in [animation-delay:100ms]">
           <p className="eyebrow">{product.category} · {product.format}</p>
           <h1 className="mt-3 text-4xl leading-tight md:text-5xl">{product.name}</h1>
+          {product.author && <p className="mt-3 text-sm font-medium text-primary">By {product.author}</p>}
           <p className="mt-4 text-lg text-muted-foreground">{product.tagline}</p>
 
           <ul className="mt-6 space-y-3">
@@ -98,17 +99,14 @@ function ProductPage() {
 
           <div className="mt-8 rounded-2xl border border-border bg-card p-6 shadow-soft">
             <Price price={product.price} originalPrice={product.originalPrice} large />
-            <p className="mt-1 text-sm text-muted-foreground">One-time payment · Instant PDF download</p>
+            <p className="mt-1 text-sm text-muted-foreground">One-time purchase · Digital delivery via checkout</p>
             <BuyButton href={product.buyUrl} size="xl" className="mt-5 w-full" productName={product.name} />
             <ul className="mt-5 grid gap-2 text-sm text-muted-foreground">
               <li className="flex gap-2">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="mt-0.5 shrink-0" aria-hidden><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7a4 4 0 018 0v3" /></svg>
                 Secure checkout by our payment provider. We never see your card or UPI details.
               </li>
-              <li className="flex gap-2">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="mt-0.5 shrink-0" aria-hidden><path d="M4 12a8 8 0 1 0 2.3-5.6" /><path d="M4 4v4h4" /></svg>
-                {fill("{refundDays}-day refund guarantee. Not right for you? Email us for a full refund.")}
-              </li>
+
             </ul>
           </div>
         </div>
@@ -116,7 +114,7 @@ function ProductPage() {
 
       <section className="container-page mt-20 grid gap-10 md:grid-cols-3">
         <div className="md:col-span-1">
-          <h2 className="text-2xl">About this guide</h2>
+          <h2 className="text-2xl">About this e-book</h2>
           <p className="mt-3 leading-relaxed text-muted-foreground">{product.description}</p>
         </div>
         <div className="rounded-2xl border border-border bg-card p-6">
@@ -152,7 +150,7 @@ function ProductPage() {
       )}
 
       <section className="container-page mt-20 grid gap-10 md:grid-cols-[1fr_1.4fr]">
-        <SectionHeading eyebrow="FAQ" title="Questions about this guide" />
+        <SectionHeading eyebrow="FAQ" title="Questions about this e-book" />
         <FaqList items={[...product.faqs, ...site.faqs.slice(0, 3)]} />
       </section>
 

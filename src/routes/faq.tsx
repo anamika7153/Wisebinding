@@ -2,13 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { FaqList } from "@/components/store/FaqList";
 import { PageIntro } from "@/components/store/Section";
 import { seo } from "@/lib/seo";
-import { site } from "@/site";
+import { site, supportUrl } from "@/site";
 
 export const Route = createFileRoute("/faq")({
   head: () =>
     seo({
       title: "Frequently asked questions",
-      description: `Answers about downloads, payments, refunds and licences for ${site.brand} e-books and guides.`,
+      description: `Answers about e-book access, payments and support for ${site.brand} e-books and guides.`,
       path: "/faq",
     }),
   component: FaqPage,
@@ -22,7 +22,7 @@ function FaqPage() {
         <FaqList items={site.faqs} />
         <p className="mt-8 text-muted-foreground">
           Didn't find your answer? Email{" "}
-          <a href={`mailto:${site.supportEmail}`} className="font-medium text-primary underline underline-offset-4">
+          <a href={supportUrl()} target="_blank" rel="noopener noreferrer" className="font-medium text-primary underline underline-offset-4">
             {site.supportEmail}
           </a>
           . {site.supportResponse}

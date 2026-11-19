@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PolicyPage } from "@/components/store/PolicyPage";
 import { seo } from "@/lib/seo";
-import { site } from "@/site";
+import { site, supportUrl } from "@/site";
 
 export const Route = createFileRoute("/privacy")({
   head: () =>
@@ -12,28 +12,16 @@ export const Route = createFileRoute("/privacy")({
     }),
   component: () => (
     <PolicyPage title="Privacy policy">
-      <h2>What we collect</h2>
-      <p>
-        This website does not use accounts or store your payment details. When you buy, our checkout provider collects
-        your name, email and payment information to process the order and deliver your files.
-      </p>
-      <h2>How we use it</h2>
-      <ul>
-        <li>To deliver your purchase and send your receipt.</li>
-        <li>To answer your support emails.</li>
-        <li>To send product updates, only if you subscribed.</li>
-      </ul>
-      <h2>Analytics</h2>
-      <p>
-        {site.analytics.enabled
-          ? "We use privacy-friendly analytics that do not use cookies or track you across sites."
-          : "This site does not currently use analytics or tracking cookies."}
-      </p>
-      <h2>Your rights</h2>
-      <p>
-        You can ask us to see, correct or delete your data at any time by emailing{" "}
-        <a href={`mailto:${site.supportEmail}`}>{site.supportEmail}</a>.
-      </p>
+      <h2>About this website</h2>
+      <p>{site.brand} is an e-book storefront run by Anamika Yadav. You do not create an account here, and this site does not collect payment details.</p>
+      <h2>Checkout and digital delivery</h2>
+      <p>Buy links take you to an external checkout provider. That provider handles payment, order information and delivery under its own privacy policy. The current e-book uses Gumroad.</p>
+      <h2>Support by email</h2>
+      <p>Support links open Gmail with our email address filled in. Gmail may require you to sign in. If you send an email, Anamika Yadav receives the information you choose to include and uses it to respond to your enquiry. Do not send passwords or card details.</p>
+      <h2>Analytics and hosting</h2>
+      <p>This store has no configured analytics or newsletter signup. The hosting provider may process technical information needed to serve the website. External services such as Gumroad, Gmail and Google Fonts have their own privacy practices.</p>
+      <h2>Contact</h2>
+      <p>For questions about information you have shared with us, contact <a href={supportUrl()} target="_blank" rel="noopener noreferrer">{site.supportEmail}</a>.</p>
     </PolicyPage>
   ),
 });

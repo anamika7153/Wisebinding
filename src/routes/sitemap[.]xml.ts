@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { products } from "@/products";
 import { site } from "@/site";
 
-const staticPaths = ["/", "/products", "/about", "/faq", "/contact", "/refund", "/privacy", "/terms"];
+const staticPaths = ["/", "/products", "/about", "/faq", "/contact", "/privacy", "/terms"];
 
 /** Generated from src/products.ts — new products appear automatically. */
 export const Route = createFileRoute("/sitemap.xml")({

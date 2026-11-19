@@ -40,7 +40,7 @@ export function ProductBrowser() {
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search guides…"
+            placeholder="Search e-books…"
             className="h-11 w-full rounded-full border border-input bg-card pl-10 pr-4 text-sm placeholder:text-muted-foreground"
           />
         </label>
@@ -56,7 +56,7 @@ export function ProductBrowser() {
         </div>
       ) : (
         <div className="mt-8 rounded-2xl border border-dashed border-border p-10 text-center text-muted-foreground">
-          No guides match that search.{" "}
+          No e-books match that search.{" "}
           <button type="button" className="font-medium text-primary underline underline-offset-4" onClick={() => { setQuery(""); setCategory(null); }}>
             Show all
           </button>

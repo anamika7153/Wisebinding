@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PolicyPage } from "@/components/store/PolicyPage";
 import { seo } from "@/lib/seo";
-import { site } from "@/site";
+import { site, supportUrl } from "@/site";
 
 export const Route = createFileRoute("/terms")({
   head: () =>
@@ -12,23 +12,16 @@ export const Route = createFileRoute("/terms")({
     }),
   component: () => (
     <PolicyPage title="Terms of sale">
-      <h2>Your licence</h2>
-      <p>
-        Each purchase gives you a personal, non-transferable licence to read and use the product. You may not resell,
-        share or publish the files.
-      </p>
-      <h2>Payment</h2>
-      <p>
-        Prices are shown in {site.currency}. Payments are processed by our checkout provider, whose terms also apply.
-      </p>
-      <h2>Delivery</h2>
-      <p>Products are delivered digitally by email immediately after payment.</p>
-      <h2>Refunds</h2>
-      <p>See our refund policy. You may request a full refund within {site.refundDays} days of purchase.</p>
+      <h2>About Wisebinding</h2>
+      <p>{site.brand} is an e-book store by Anamika Yadav. Each title’s page lists its description, format, contents and price.</p>
+      <h2>Purchases</h2>
+      <p>Prices on this store are displayed in Indian rupees (INR). Buy links take you to the external checkout provider. Review the final amount, any applicable taxes and the provider’s terms before completing payment.</p>
+      <h2>Digital access</h2>
+      <p>The checkout provider handles payment and access to your purchase. No e-book files or payment information are hosted or collected by this storefront.</p>
+      <h2>Product information</h2>
+      <p>E-books have different subjects and intended readers. Read the details for the title you choose. Crack Your Next Interview with AI is an educational guide, not a guarantee of a job or interview outcome.</p>
       <h2>Contact</h2>
-      <p>
-        Questions about these terms? Email <a href={`mailto:${site.supportEmail}`}>{site.supportEmail}</a>.
-      </p>
+      <p>Questions about an e-book or an order? Contact <a href={supportUrl()} target="_blank" rel="noopener noreferrer">{site.supportEmail}</a>.</p>
     </PolicyPage>
   ),
 });

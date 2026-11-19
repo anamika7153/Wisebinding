@@ -1,9 +1,13 @@
 # Roadmap
 
 - [x] Storefront: home, products, product pages, about, FAQ, contact, policies, 404
-- [x] Sample products = downloadable e-books and guides (PDF), prices in INR
-- [x] Suggest unique brand names (Pothi & Page in use; user may pick another)
+- [x] Real e-book catalogue, prices in INR
+- [x] Brand finalised as Wisebinding
 - [x] Sitemap, robots, JSON-LD, per-page SEO
 - [x] README with editing + deploy guide
 - [x] Tests for bundle pricing / product data
-- [ ] Real checkout links (waiting on the user's payment provider)
+- [x] Replace sample catalogue with the supplied e-book and real Gumroad checkout
+- [x] Generate and display the dedicated cover
+- [x] Rebrand to Wisebinding and Anamika Yadav; generalise store copy and add Gmail support
+- [x] Remove refund content and replace placeholder policies with factual static-store disclosures
+- [x] Verify catalogue, checkout, support links and mobile layout

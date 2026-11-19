@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { buttonVariants } from "@/components/ui/button";
 import { bundles, formatPrice, getBundleProducts, getBundleSavings, products } from "@/products";
-import { fill, site } from "@/site";
+import { site } from "@/site";
 import { BuyButton } from "./BuyButton";
 import { Price } from "./Price";
 import { SectionHeading } from "./Section";
@@ -110,7 +110,7 @@ export function FeaturedOffer() {
 export function HowItWorks() {
   return (
     <section aria-labelledby="how-title" className="container-page reveal mt-24">
-      <SectionHeading eyebrow="How it works" title="From checkout to reading in about a minute." id="how-title" center />
+      <SectionHeading eyebrow="How it works" title="Find it. Buy it. Read it." id="how-title" center />
       <ol className="mt-10 grid gap-6 md:grid-cols-3">
         {site.howItWorks.map((step, i) => (
           <li key={step.title} className="rounded-2xl border border-border bg-card p-6 text-center">
@@ -149,10 +149,9 @@ export function SocialProof() {
   return (
     <section aria-labelledby="proof-title" className="container-page reveal mt-24">
       <div className="mx-auto max-w-2xl rounded-3xl border border-dashed border-primary/30 bg-card p-8 text-center md:p-12">
-        <p className="eyebrow">Honest beginnings</p>
+        <p className="eyebrow">For curious minds</p>
         <h2 id="proof-title" className="mt-3 text-3xl">{site.firstCustomers.title}</h2>
         <p className="mt-4 text-muted-foreground">{site.firstCustomers.text}</p>
-        <p className="mt-5 text-sm font-medium text-primary">{fill("{refundDays}-day refund guarantee on every purchase")}</p>
       </div>
     </section>
   );
@@ -164,8 +163,8 @@ export function AboutBlock({ withLink = true }: { withLink?: boolean }) {
     <section aria-labelledby="about-title" className="container-page reveal mt-24">
       <div className="grid items-center gap-10 md:grid-cols-2">
         <img
-          src={a.image.src}
-          alt={a.image.alt}
+          src={products[0]?.images[0]?.src}
+          alt={products[0]?.images[0]?.alt ?? ""}
           width={1200}
           height={900}
           loading="lazy"

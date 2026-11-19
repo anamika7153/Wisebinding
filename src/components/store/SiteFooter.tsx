@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { site } from "@/site";
+import { site, supportUrl } from "@/site";
 import { Logo } from "./SiteHeader";
 
 export function SiteFooter() {
@@ -11,7 +11,7 @@ export function SiteFooter() {
           <Logo />
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{site.tagline}</p>
           <a
-            href={`mailto:${site.supportEmail}`}
+            href={supportUrl()} target="_blank" rel="noopener noreferrer"
             className="mt-4 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
           >
             {site.supportEmail}
@@ -32,7 +32,6 @@ export function SiteFooter() {
         <nav aria-label="Policies">
           <h2 className="font-sans text-sm font-semibold text-foreground">Policies</h2>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/refund" className="hover:text-foreground">Refund policy</Link></li>
             <li><Link to="/privacy" className="hover:text-foreground">Privacy policy</Link></li>
             <li><Link to="/terms" className="hover:text-foreground">Terms of sale</Link></li>
           </ul>

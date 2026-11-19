@@ -1,143 +1,72 @@
-/**
- * All brand and site copy lives here. Edit this file to rebrand the store.
- * Product data lives in src/products.ts.
- *
- * Fields marked PLACEHOLDER are sample values — replace them with your own.
- */
-
+/** Brand, copy and static-store settings. Product details live in products.ts. */
 export const site = {
-  /** PLACEHOLDER brand details */
-  brand: "Pothi & Page",
-  tagline: "Practical e-books and guides for independent creatives.",
-  mission:
-    "We write the guides we wished we had when we started freelancing: clear, honest and practical, so you can skip years of trial and error and focus on the work you love.",
-  supportEmail: "hello@pothiandpage.com",
-  supportResponse: "We reply within one business day.",
-  /** ISO 4217 code, used for price formatting and Product JSON-LD */
+  brand: "Wisebinding",
+  tagline: "E-books for curious minds and new possibilities.",
+  mission: "Wisebinding brings together e-books across topics, so you can explore what interests you and find your next read.",
+  supportEmail: "dev.personal.pf@gmail.com",
+  supportResponse: "Contact Anamika Yadav with questions about an e-book or your order.",
   currency: "INR",
-  /** BCP 47 locale for number formatting */
   locale: "en-IN",
-  /**
-   * Your live site address, e.g. "https://pothiandpage.com" (no trailing slash).
-   * Used for canonical links, share images and the sitemap. When empty, the
-   * sitemap uses the address the visitor is on.
-   */
   url: "",
-  /** Days customers have to request a refund */
-  refundDays: 14,
-
   hero: {
-    eyebrow: "E-books & guides for freelancers",
-    headline: "Build a calmer, better-paid freelance life, one guide at a time.",
-    subheadline:
-      "Short, practical PDF guides on pricing, focus and running your own business. Download instantly and start applying what you learn today.",
-    cta: "Browse products",
-    microTrust: "Instant download · Secure checkout · {refundDays}-day refund guarantee",
+    eyebrow: "Independent e-books & guides",
+    headline: "Wisebinding",
+    subheadline: "A place for curious minds. Explore e-books, discover new perspectives, and choose your next chapter — whatever your interests.",
+    cta: "Browse e-books",
+    microTrust: "Digital reads · Hosted checkout · Author support",
   },
-
   trust: [
-    { title: "Instant delivery", text: "Your PDF arrives by email the moment you pay." },
-    { title: "Secure payment", text: "Checkout is handled by a trusted payment provider." },
-    { title: "Refund guarantee", text: "Not a fit? Ask within {refundDays} days for a full refund." },
-    { title: "Real human support", text: "Questions go to a real person, not a bot." },
+    { title: "Digital delivery", text: "Access your purchase through the checkout provider." },
+    { title: "Hosted checkout", text: "Payment is handled on the provider’s website, not here." },
+    { title: "Explore your interests", text: "E-books across topics, for different reading journeys." },
+    { title: "Author support", text: "Questions? Get in touch with Anamika Yadav." },
   ],
-
-  /** Problem – Agitate – Solve */
   pas: {
-    eyebrow: "Sound familiar?",
-    problem: "You became a freelancer for freedom, not for guesswork and late nights.",
-    agitate: [
-      "Not sure what to charge, so you quote low and hope.",
-      "Busy all day, yet the important work keeps slipping.",
-      "Endless free advice online, but no clear plan to follow.",
-    ],
-    solve:
-      "Our guides turn years of real freelance experience into clear, step-by-step playbooks you can read in an evening and use the next morning.",
+    eyebrow: "Follow your curiosity",
+    problem: "There’s always something new to discover.",
+    agitate: ["A topic you want to understand better.", "A fresh perspective on a familiar challenge.", "A new interest waiting for its first chapter."],
+    solve: "Find an e-book that speaks to where you are today. Wisebinding is open to every topic, not just one kind of reader.",
   },
-
   howItWorks: [
-    { title: "Choose", text: "Pick the guide that fits where you are right now." },
-    { title: "Pay securely", text: "Check out in under a minute with UPI, card or wallet." },
-    { title: "Download instantly", text: "Get your PDF by email and start reading on any device." },
+    { title: "Find your read", text: "Explore the collection and read each e-book’s details." },
+    { title: "Visit checkout", text: "The buy link takes you to the e-book’s hosted checkout." },
+    { title: "Start reading", text: "Follow the checkout provider’s instructions to access your purchase." },
   ],
-
-  /** Leave empty until you have real testimonials. Never invent them. */
   testimonials: [] as { quote: string; name: string; role?: string }[],
-
   firstCustomers: {
-    title: "Be among our first customers",
-    text: "We're a new studio, so we don't have a wall of reviews yet. What we do have is a no-questions refund guarantee and a real person answering every email. Try a guide, and tell us honestly what you think.",
+    title: "Your reading journey starts here",
+    text: "Explore the e-book details, see what’s inside, and choose the read that’s right for you. Have a question? Anamika Yadav is just an email away.",
   },
-
   about: {
-    eyebrow: "About us",
-    title: "A small studio, run by real people.",
-    /** PLACEHOLDER founder details */
-    founderName: "Ananya Rao",
-    founderRole: "Founder & designer",
-    body: [
-      "Pothi & Page started at a kitchen table after years of freelance work, and too many lessons learned the hard way.",
-      "Every guide we publish is built from what actually worked for us and the freelancers we know. We keep them short, honest and practical, and stand behind each one with a real refund guarantee.",
-    ],
-    image: { src: "/images/studio.webp", alt: "Hands sketching in a notebook on a wooden desk" },
+    eyebrow: "Behind Wisebinding",
+    title: "Meet Anamika Yadav.",
+    founderName: "Anamika Yadav",
+    founderRole: "Author · Wisebinding",
+    body: ["I’m Anamika Yadav, the author behind Wisebinding. This is where you’ll find my e-books and guides.", "Wisebinding isn’t limited to one subject or one audience. Each e-book has its own focus, with details to help you decide whether it’s for you."],
   },
-
   faqs: [
-    {
-      q: "How do I receive my purchase?",
-      a: "Right after payment you'll get an email with a download link. You can also download from the checkout confirmation page.",
-    },
-    {
-      q: "What software do I need?",
-      a: "Nothing special. Our guides are PDFs that open on any phone, tablet, laptop or e-reader.",
-    },
-    {
-      q: "Can I get a refund?",
-      a: "Yes. If a product isn't right for you, email us within {refundDays} days of purchase for a full refund.",
-    },
-    {
-      q: "Is my payment secure?",
-      a: "Payments are processed by our checkout provider. We never see or store your card or UPI details.",
-    },
-    {
-      q: "Can I share the e-book with friends?",
-      a: "Each purchase is a personal licence. Please point friends to the store instead, it helps us keep writing.",
-    },
+    { q: "How do I buy an e-book?", a: "Choose an e-book and select Buy now. You’ll go to its hosted checkout to complete your purchase." },
+    { q: "How do I access my purchase?", a: "Your checkout provider handles digital delivery. Follow the instructions on your confirmation page and receipt." },
+    { q: "What format are the e-books in?", a: "Check each e-book’s page for its format, page count and device information. These details can vary between titles." },
+    { q: "Is my payment handled here?", a: "No. Payment happens on the checkout provider’s website. Wisebinding does not collect your card or payment details." },
+    { q: "Who can I contact for help?", a: "Email Anamika Yadav at dev.personal.pf@gmail.com with the e-book title and any relevant order details. Never send card details or passwords." },
   ],
-
-  newsletter: {
-    /**
-     * Form endpoint that accepts a POST with an "email" field
-     * (e.g. Buttondown, ConvertKit, Formspree). Leave empty to hide the signup.
-     */
-    endpoint: "",
-    title: "Get new guides first",
-    text: "One short email when we release something new. No spam.",
-    privacyNote: "We only use your email to send updates. Unsubscribe anytime.",
-  },
-
-  /** Privacy-friendly analytics (e.g. Plausible). Off by default. */
-  analytics: {
-    enabled: false,
-    scriptSrc: "https://plausible.io/js/script.js",
-    domain: "",
-  },
-
+  newsletter: { endpoint: "", title: "Get new e-books first", text: "Updates when a new read arrives.", privacyNote: "Unsubscribe anytime." },
+  analytics: { enabled: false, scriptSrc: "https://plausible.io/js/script.js", domain: "" },
   nav: [
-    { label: "Products", to: "/products" },
+    { label: "E-books", to: "/products" },
     { label: "About", to: "/about" },
     { label: "FAQ", to: "/faq" },
     { label: "Contact", to: "/contact" },
   ] as const,
-
-  /** PLACEHOLDER legal details — have them reviewed for your country. */
-  legal: {
-    businessName: "Pothi & Page",
-    lastUpdated: "November 2026",
-  },
+  legal: { businessName: "Wisebinding", lastUpdated: "19 November 2026" },
 };
 
-/** Replace {refundDays} and similar tokens in copy. */
+/** Gmail compose is a plain external link; it requires no accounts on this site. */
+export function supportUrl(): string {
+  return `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(site.supportEmail)}`;
+}
+
 export function fill(text: string): string {
-  return text.replaceAll("{refundDays}", String(site.refundDays)).replaceAll("{brand}", site.brand);
+  return text.replaceAll("{brand}", site.brand);
 }

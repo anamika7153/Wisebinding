@@ -36,3 +36,6 @@ use the editor.
 - Per-route SEO goes through `seo()` in `src/lib/seo.ts`; it only emits og:image when `site.url` makes the image absolute.
 - `sitemap.xml` and `robots.txt` are server routes generated from `products.ts`, so new products are indexed automatically.
 - Testimonials are real-only: an empty array shows the "first customers" block instead of invented social proof.
+
+- Store product images as CDN asset pointers; keep downloadable e-book files off the storefront because checkout providers own delivery.
+- Use the `supportUrl()` builder for support links so all pages open the same Gmail compose recipient without a backend.

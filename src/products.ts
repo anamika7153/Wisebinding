@@ -1,12 +1,6 @@
-/**
- * Every product in the store. Add a product by adding one object to `products`.
- * The grid, filters, product pages, bundles, sitemap and JSON-LD all read from here.
- *
- * The three products below are SAMPLE products — replace them with your own,
- * including the buyUrl (your Razorpay Payment Page, Stripe Payment Link, Gumroad or Lemon Squeezy link).
- */
-
 import { site } from "./site";
+import cover from "./assets/interview-cover.webp.asset.json";
+import coverThumb from "./assets/interview-cover-640.webp.asset.json";
 
 export type ProductImage = {
   /** Path under /public, e.g. "/images/my-product.webp" */
@@ -21,6 +15,7 @@ export type Testimonial = { quote: string; name: string; role?: string };
 export type Product = {
   slug: string;
   name: string;
+  author?: string;
   tagline: string;
   category: string;
   description: string;
@@ -52,139 +47,56 @@ export type Bundle = {
 
 export const products: Product[] = [
   {
-    // SAMPLE PRODUCT
-    slug: "the-calm-freelancer",
-    name: "The Calm Freelancer",
-    tagline: "Simple habits for a steadier, more fulfilling independent life.",
-    category: "Business",
-    description:
-      "A practical e-book on running a freelance business without burning out. Learn how to find steady clients, set healthy boundaries, plan your weeks and build a buffer, so freelancing feels like freedom again.",
+    slug: "crack-your-next-interview-with-ai",
+    name: "Crack Your Next Interview with AI",
+    author: "Anamika Yadav",
+    tagline: "ATS Resumes, AI Mock Interviews & Smarter Job Search for Indian Job Seekers",
+    category: "Career & Job Search",
     price: 499,
-    originalPrice: 799,
-    badge: "Bestseller",
-    format: "PDF e-book · 120 pages",
-    images: [
-      {
-        src: "/images/calm.webp",
-        thumb: "/images/calm-640.webp",
-        alt: "The Calm Freelancer e-book shown as a hardcover and on a tablet",
-      },
-    ],
-    benefits: [
-      "Find steadier work instead of riding the feast-and-famine cycle",
-      "Say no to bad-fit clients without feeling guilty",
-      "Build a simple weekly rhythm that protects your evenings",
-    ],
-    features: [
-      "12 short, actionable chapters",
-      "Client-finding playbook for Indian and global markets",
-      "Boundary scripts you can copy and paste",
-      "Monthly money and buffer plan",
-      "Reads well on phone, tablet and e-reader",
-    ],
-    includes: ["PDF e-book (120 pages)", "Printable weekly planner pages", "Free updates for life"],
-    faqs: [
-      {
-        q: "Is this for new freelancers?",
-        a: "Yes. It's written for anyone in their first five years, whether you're just starting or trying to make it sustainable.",
-      },
-      {
-        q: "Can I read it on Kindle?",
-        a: "Yes. You can send the PDF to your Kindle or open it on any device.",
-      },
-    ],
-    buyUrl: "https://example.com/checkout/the-calm-freelancer",
+    originalPrice: 1999,
+    format: "PDF e-book · 195 pages",
+    buyUrl: "https://littlefixesco.gumroad.com/l/CrackYourNextInterviewwithAI",
     featured: true,
-  },
-  {
-    // SAMPLE PRODUCT
-    slug: "price-with-confidence",
-    name: "Price With Confidence",
-    tagline: "Charge what you're worth and write proposals that win.",
-    category: "Money",
-    description:
-      "A step-by-step pricing and proposal guide. Learn a clear method to price your services, present your value, and handle pushback on price without discounting, plus ready-made proposal outlines.",
-    price: 399,
-    format: "PDF guide · 64 pages",
-    images: [
-      {
-        src: "/images/proposal.webp",
-        thumb: "/images/proposal-640.webp",
-        alt: "Pricing and proposal guide booklet next to a tablet",
-      },
-    ],
+    images: [{ src: cover.url, thumb: coverThumb.url, alt: "Crack Your Next Interview with AI by Anamika Yadav — evergreen Wisebinding cover with a golden staircase and AI-inspired lines" }],
+    description: "A practical, step-by-step guide for Indian job seekers who are applying everywhere and hearing nothing back. Hiring has changed: software reads your resume before a person does, recruiters search by keywords, and AI tools may score your first interview. This 195-page eBook shows how that system works and how to use AI to get through every stage of it honestly, from an ATS-friendly resume and a recruiter-ready profile to AI mock interviews, scam safety and offer negotiation. It is built for India, written for beginners, and works with free AI tools.",
     benefits: [
-      "Price your services with a clear, repeatable method",
-      "Send a polished proposal in under 30 minutes",
-      "Raise your rates without losing good clients",
+      "Find the exact hiring stage where you’re losing, and fix that first",
+      "Build a clean, ATS-friendly resume that both software and recruiters can read",
+      "Tailor your resume to any job description in about 15 minutes with AI",
+      "Get found by recruiters on LinkedIn and Naukri",
+      "Walk into HR, technical and video interviews prepared, with practised STAR stories",
+      "Spot fake jobs and scams before they cost you money or your documents",
+      "Understand your CTC and in-hand pay, and negotiate your offer with confidence",
     ],
     features: [
-      "Pricing worksheet with worked examples in ₹",
-      "3 proposal outlines (design, writing, consulting)",
-      "Scope and timeline checklist",
-      "Email scripts for follow-ups and rate increases",
+      "Built for the Indian job market: Naukri, LinkedIn, campus drives, GCCs, notice periods and CTC",
+      "Teaches AI as a coach, not a ghostwriter: sharpen your real experience, never fake it",
+      "Practical frameworks, including the Three Layers of AI in Hiring, the CLEAR Career Framework, the 10-JD Method, the 3-Check Rule, the STOP Check and the OFFER Framework",
+      "Ready-to-copy AI prompts for ChatGPT, Claude or Gemini in every chapter",
+      "Illustrative mini case studies, ‘Try This’ exercises and key takeaways in every chapter",
+      "Beginner-friendly: works with free AI tools and a simple spreadsheet",
+      "PDF with a clickable Contents page and chapter bookmarks for easy navigation",
     ],
-    includes: ["PDF guide (64 pages)", "Printable pricing worksheet", "Free updates for life"],
+    includes: [
+      "Introduction, 19 chapters, an Appendix toolkit and a Conclusion",
+      "30-Day Job Search Sprint and a 7-Day Interview Prep Plan",
+      "Worksheets: skills inventory, JD keyword mapping, application tracker, STAR story bank, networking tracker and offer comparison",
+      "ATS-friendly resume skeleton",
+      "Cheat sheets: ATS checklist, action verbs, AI prompt library, top 30 HR questions, video interview setup, interview-day checklist, scam red flags and negotiation scripts",
+    ],
     faqs: [
-      {
-        q: "Does it cover pricing for international clients?",
-        a: "Yes. There's a chapter on pricing in USD and other currencies when working with clients abroad.",
-      },
+      { q: "What format is the eBook in?", a: "A 195-page PDF with a clickable Contents page and bookmarks for every chapter. It works on phone, tablet and laptop." },
+      { q: "Do I need to be technical?", a: "No. If you can use WhatsApp and a web browser, you can use every tool in this book." },
+      { q: "Do I need paid AI tools?", a: "No. Every strategy works with free AI tiers, free learning platforms and a simple spreadsheet." },
+      { q: "I’m a fresher. Is this for me?", a: "Yes. It covers campus hiring, online assessments, projects and building your first resume." },
+      { q: "Isn’t using AI for job applications cheating?", a: "Not the way this book teaches it. You use AI to prepare and sharpen your real experience, never to invent skills or to answer during a live test or interview." },
+      { q: "Does this guarantee a job?", a: "No book can promise that. It gives you a clear system to find where you’re getting stuck, fix it, and walk into every interview prepared." },
     ],
-    buyUrl: "https://example.com/checkout/price-with-confidence",
-  },
-  {
-    // SAMPLE PRODUCT
-    slug: "deep-work-days",
-    name: "Deep Work Days",
-    tagline: "A workbook for focused mornings and finished projects.",
-    category: "Productivity",
-    description:
-      "A practical workbook to help you do your best work in fewer hours. Short reflections, a 21-day focus plan and simple routines that make deep, uninterrupted work a daily habit.",
-    price: 349,
-    badge: "New",
-    format: "PDF workbook · 48 pages",
-    images: [
-      {
-        src: "/images/deepwork.webp",
-        thumb: "/images/deepwork-640.webp",
-        alt: "Deep Work Days workbook open beside a tablet showing its cover",
-      },
-    ],
-    benefits: [
-      "Get your most important work done before lunch",
-      "Cut distractions without quitting your phone",
-      "Finish projects instead of juggling ten at once",
-    ],
-    features: [
-      "21-day focus plan",
-      "Daily reflection prompts",
-      "Distraction audit worksheet",
-      "Printable or fill on a tablet",
-    ],
-    includes: ["PDF workbook (48 pages)", "Fillable tablet version", "Free updates for life"],
-    faqs: [
-      {
-        q: "Can I fill it in digitally?",
-        a: "Yes. It works with apps like GoodNotes or Notability, or you can print it.",
-      },
-    ],
-    buyUrl: "https://example.com/checkout/deep-work-days",
   },
 ];
 
-/** Optional bundles. Leave the array empty to hide the bundle block. */
-export const bundles: Bundle[] = [
-  {
-    // SAMPLE BUNDLE
-    slug: "freelancer-library",
-    name: "The Freelancer's Library",
-    tagline: "All three guides together, for one simple price.",
-    price: 999,
-    productSlugs: ["the-calm-freelancer", "price-with-confidence", "deep-work-days"],
-    buyUrl: "https://example.com/checkout/freelancer-library",
-  },
-];
+/** Optional bundles, populated only when a real offer is available. */
+export const bundles: Bundle[] = [];
 
 export function getProduct(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);
