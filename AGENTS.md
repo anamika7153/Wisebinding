@@ -28,3 +28,11 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Store architecture
+
+- All products, bundles and price helpers live in `src/products.ts`; all copy and settings live in `src/site.ts`. Pages, filters, sitemap and JSON-LD read from them, so adding a product is one object and no page edits.
+- No backend or database: buy buttons link to a hosted checkout URL (`buyUrl`), so the site never handles payment data.
+- Per-route SEO goes through `seo()` in `src/lib/seo.ts`; it only emits og:image when `site.url` makes the image absolute.
+- `sitemap.xml` and `robots.txt` are server routes generated from `products.ts`, so new products are indexed automatically.
+- Testimonials are real-only: an empty array shows the "first customers" block instead of invented social proof.
