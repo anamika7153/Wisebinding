@@ -13,7 +13,7 @@ Add one product object to list it in the catalogue, search, category filters, it
 
 The current title is **Crack Your Next Interview with AI**, by Anamika Yadav: 195 pages, ₹499 (original price ₹1,999), with its real Gumroad checkout URL. No PDF is stored here.
 
-Support links open Gmail compose with the recipient prefilled. Buyers may need to sign in to Gmail. Analytics and newsletter signup are disabled. No refund page or promises are displayed.
+Support links show “Email support” and open the visitor’s configured email app with the recipient prefilled; an email handler must be configured on their device. The address is not shown as page text, but remains in the link destination. Analytics and newsletter signup are disabled. No refund page or promises are displayed.
 
 ## Run and publish
 

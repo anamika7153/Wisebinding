@@ -38,4 +38,4 @@ use the editor.
 - Testimonials are real-only: an empty array shows the "first customers" block instead of invented social proof.
 
 - Store product images as CDN asset pointers; keep downloadable e-book files off the storefront because checkout providers own delivery.
-- Use the `supportUrl()` builder for support links so all pages open the same Gmail compose recipient without a backend.
+- Use the `supportUrl()` mailto builder for support links so all pages use the visitor’s email app without embedding blocked webmail.

@@ -21,7 +21,7 @@ export const Route = createFileRoute("/terms")({
       <h2>Product information</h2>
       <p>E-books have different subjects and intended readers. Read the details for the title you choose. Crack Your Next Interview with AI is an educational guide, not a guarantee of a job or interview outcome.</p>
       <h2>Contact</h2>
-      <p>Questions about an e-book or an order? Contact <a href={supportUrl()} target="_blank" rel="noopener noreferrer">{site.supportEmail}</a>.</p>
+      <p>Questions about an e-book or an order? <a href={supportUrl()}>Email support</a>.</p>
     </PolicyPage>
   ),
 });

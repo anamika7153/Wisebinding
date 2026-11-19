@@ -17,11 +17,11 @@ export const Route = createFileRoute("/privacy")({
       <h2>Checkout and digital delivery</h2>
       <p>Buy links take you to an external checkout provider. That provider handles payment, order information and delivery under its own privacy policy. The current e-book uses Gumroad.</p>
       <h2>Support by email</h2>
-      <p>Support links open Gmail with our email address filled in. Gmail may require you to sign in. If you send an email, Anamika Yadav receives the information you choose to include and uses it to respond to your enquiry. Do not send passwords or card details.</p>
+      <p>If you send a support email, Anamika Yadav receives the information you choose to include and uses it to respond to your enquiry. Do not send passwords or card details.</p>
       <h2>Analytics and hosting</h2>
-      <p>This store has no configured analytics or newsletter signup. The hosting provider may process technical information needed to serve the website. External services such as Gumroad, Gmail and Google Fonts have their own privacy practices.</p>
+      <p>This store has no configured analytics or newsletter signup. The hosting provider may process technical information needed to serve the website. External services such as Gumroad and Google Fonts have their own privacy practices.</p>
       <h2>Contact</h2>
-      <p>For questions about information you have shared with us, contact <a href={supportUrl()} target="_blank" rel="noopener noreferrer">{site.supportEmail}</a>.</p>
+      <p>For questions about information you have shared with us: <a href={supportUrl()}>Email support</a>.</p>
     </PolicyPage>
   ),
 });

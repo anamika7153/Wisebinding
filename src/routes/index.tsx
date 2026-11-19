@@ -92,9 +92,9 @@ function Home() {
             title="Questions, answered."
             text={
               <>
-                Still unsure? Email{" "}
-                <a className="text-primary underline underline-offset-4" href={supportUrl()} target="_blank" rel="noopener noreferrer">
-                  {site.supportEmail}
+                Still unsure?{" "}
+                <a className="text-primary underline underline-offset-4" href={supportUrl()}>
+                  Email support
                 </a>
                 .
               </>

@@ -49,7 +49,7 @@ export const site = {
     { q: "How do I access my purchase?", a: "Your checkout provider handles digital delivery. Follow the instructions on your confirmation page and receipt." },
     { q: "What format are the e-books in?", a: "Check each e-book’s page for its format, page count and device information. These details can vary between titles." },
     { q: "Is my payment handled here?", a: "No. Payment happens on the checkout provider’s website. Wisebinding does not collect your card or payment details." },
-    { q: "Who can I contact for help?", a: "Email Anamika Yadav at dev.personal.pf@gmail.com with the e-book title and any relevant order details. Never send card details or passwords." },
+    { q: "Who can I contact for help?", a: "Contact Anamika Yadav using the Email support link, with the e-book title and any relevant order details. Never send card details or passwords." },
   ],
   newsletter: { endpoint: "", title: "Get new e-books first", text: "Updates when a new read arrives.", privacyNote: "Unsubscribe anytime." },
   analytics: { enabled: false, scriptSrc: "https://plausible.io/js/script.js", domain: "" },
@@ -62,9 +62,9 @@ export const site = {
   legal: { businessName: "Wisebinding", lastUpdated: "19 November 2026" },
 };
 
-/** Gmail compose is a plain external link; it requires no accounts on this site. */
+/** Opens the visitor’s configured email app without loading a webmail page. */
 export function supportUrl(): string {
-  return `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(site.supportEmail)}`;
+  return `mailto:${site.supportEmail}`;
 }
 
 export function fill(text: string): string {

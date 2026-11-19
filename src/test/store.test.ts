@@ -38,10 +38,8 @@ describe("store rules", () => {
     expect(products[0]?.author).toBe("Anamika Yadav");
   });
 
-  it("opens Gmail with the supplied support recipient", () => {
-    const url = new URL(supportUrl());
-    expect(url.origin).toBe("https://mail.google.com");
-    expect(url.searchParams.get("to")).toBe("dev.personal.pf@gmail.com");
+  it("opens an email app with the supplied support recipient instead of blocked webmail", () => {
+    expect(supportUrl()).toBe("mailto:dev.personal.pf@gmail.com");
   });
 
   it("does not configure a refund promise", () => {

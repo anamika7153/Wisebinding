@@ -24,8 +24,8 @@ function ContactPage() {
           <p className="mt-2 text-muted-foreground">
             For order help or questions about an e-book before you buy.
           </p>
-          <a href={supportUrl()} target="_blank" rel="noopener noreferrer" className={`${buttonVariants({ variant: "brand", size: "xl" })} mt-6`}>
-            {site.supportEmail}
+          <a href={supportUrl()} className={`${buttonVariants({ variant: "brand", size: "xl" })} mt-6`}>
+            Email support
           </a>
         </div>
         <div className="rounded-3xl bg-surface p-8">

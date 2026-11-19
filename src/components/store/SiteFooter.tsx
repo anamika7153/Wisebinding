@@ -11,10 +11,10 @@ export function SiteFooter() {
           <Logo />
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{site.tagline}</p>
           <a
-            href={supportUrl()} target="_blank" rel="noopener noreferrer"
+            href={supportUrl()}
             className="mt-4 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
           >
-            {site.supportEmail}
+            Email support
           </a>
         </div>
         <nav aria-label="Store">
