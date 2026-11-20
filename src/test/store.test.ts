@@ -1,5 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { bundles, formatPrice, getBundleSavings, getProduct, getRelatedProducts, products, searchProducts } from "@/products";
+import {
+  bundles,
+  formatPrice,
+  getBundleSavings,
+  getProduct,
+  getRelatedProducts,
+  products,
+  searchProducts,
+} from "@/products";
 import { site, supportUrl } from "@/site";
 
 describe("store rules", () => {
@@ -47,21 +55,32 @@ describe("store rules", () => {
   });
 
   it("keeps bundle calculations available for future real offers", () => {
-    expect(getBundleSavings({ slug: "test", name: "Test", tagline: "", price: 400, productSlugs: ["crack-your-next-interview-with-ai"], buyUrl: "https://checkout.test" })).toEqual({ separateTotal: 499, savings: 99 });
+    expect(
+      getBundleSavings({
+        slug: "test",
+        name: "Test",
+        tagline: "",
+        price: 400,
+        productSlugs: ["crack-your-next-interview-with-ai"],
+        buyUrl: "https://checkout.test",
+      }),
+    ).toEqual({ separateTotal: 499, savings: 99 });
   });
 
   it("related products never include the current product", () => {
-    expect(getRelatedProducts("crack-your-next-interview-with-ai").map((p) => p.slug)).toEqual(["excel-for-office-jobs"]);
+    expect(getRelatedProducts("crack-your-next-interview-with-ai").map((p) => p.slug)).toEqual([
+      "excel-for-office-jobs",
+    ]);
   });
 
   it("uses the supplied Excel price of 299 rupees", () => {
     expect(getProduct("excel-for-office-jobs")?.price).toBe(299);
   });
 
-  it("does not invent an Excel checkout or original price", () => {
+  it("uses the real Excel checkout link", () => {
     const excel = getProduct("excel-for-office-jobs");
     expect(excel).toBeDefined();
-    expect(excel?.buyUrl).toBeUndefined();
+    expect(excel?.buyUrl).toBe("https://littlefixesco.gumroad.com/l/aajloa");
     expect(excel?.originalPrice).toBeUndefined();
   });
 
@@ -70,7 +89,9 @@ describe("store rules", () => {
   });
 
   it("search filters by category and text", () => {
-    expect(searchProducts(products, "", "Career & Job Search").map((p) => p.slug)).toEqual(["crack-your-next-interview-with-ai"]);
+    expect(searchProducts(products, "", "Career & Job Search").map((p) => p.slug)).toEqual([
+      "crack-your-next-interview-with-ai",
+    ]);
     expect(searchProducts(products, "ATS", null).map((p) => p.slug)).toContain("crack-your-next-interview-with-ai");
     expect(searchProducts(products, "", "Money")).toEqual([]);
   });
