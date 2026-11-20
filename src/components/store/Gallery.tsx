@@ -1,10 +1,12 @@
 import { useState } from "react";
-import type { ProductImage } from "@/products";
+import type { Product, ProductImage } from "@/products";
+import { ProductArtwork } from "./ProductArtwork";
 import { cn } from "@/lib/utils";
 
-export function Gallery({ images, badge }: { images: ProductImage[]; badge?: string | undefined }) {
+export function Gallery({ images, badge, product }: { images: ProductImage[]; badge?: string | undefined; product?: Product }) {
   const [active, setActive] = useState(0);
   const current = images[active] ?? images[0];
+  if (product?.artwork) return <div className="overflow-hidden rounded-2xl shadow-soft"><ProductArtwork product={product} /></div>;
   if (!current) return null;
   return (
     <div>

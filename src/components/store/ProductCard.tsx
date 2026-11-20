@@ -3,6 +3,7 @@ import { buttonVariants } from "@/components/ui/button";
 import type { Product } from "@/products";
 import { BuyButton } from "./BuyButton";
 import { Price } from "./Price";
+import { ProductArtwork } from "./ProductArtwork";
 
 export function ProductCard({ product, priority = false }: { product: Product; priority?: boolean }) {
   const img = product.images[0];
@@ -15,7 +16,7 @@ export function ProductCard({ product, priority = false }: { product: Product; p
         tabIndex={-1}
         aria-hidden
       >
-        {img && (
+        {product.artwork ? <ProductArtwork product={product} /> : img && (
           <img
             src={img.thumb ?? img.src}
             alt=""

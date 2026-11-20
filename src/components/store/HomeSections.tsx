@@ -50,7 +50,7 @@ export function FeaturedOffer() {
                   <Link to="/product/$slug" params={{ slug: p.slug }} className="underline-offset-4 hover:underline">
                     {p.name}
                   </Link>
-                  <span className="opacity-75">{formatPrice(p.price)}</span>
+                  <span className="opacity-75">{p.price !== undefined ? formatPrice(p.price) : "Coming soon"}</span>
                 </li>
               ))}
             </ul>

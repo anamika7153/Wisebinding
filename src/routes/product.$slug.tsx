@@ -50,13 +50,13 @@ function productJsonLd(p: Product) {
     category: p.category,
     image: p.images.map((i) => absoluteUrl(i.src)),
     brand: { "@type": "Brand", name: site.brand },
-    offers: {
+    offers: p.price !== undefined && p.buyUrl ? {
       "@type": "Offer",
       price: p.price.toFixed(2),
       priceCurrency: site.currency,
       availability: "https://schema.org/InStock",
       url: absoluteUrl(`/product/${p.slug}`),
-    },
+    } : undefined,
   };
 }
 
@@ -82,7 +82,7 @@ function ProductPage() {
 
       <section className="container-page mt-6 grid gap-10 md:grid-cols-[1.15fr_1fr] md:gap-14">
         <div className="fade-in">
-          <Gallery images={product.images} badge={product.badge} />
+          <Gallery images={product.images} badge={product.badge} product={product} />
         </div>
 
         <div className="fade-in [animation-delay:100ms]">
@@ -99,15 +99,15 @@ function ProductPage() {
 
           <div className="mt-8 rounded-2xl border border-border bg-card p-6 shadow-soft">
             <Price price={product.price} originalPrice={product.originalPrice} large />
-            <p className="mt-1 text-sm text-muted-foreground">One-time purchase · Digital delivery via checkout</p>
+            {product.buyUrl && <p className="mt-1 text-sm text-muted-foreground">One-time purchase · Digital delivery via checkout</p>}
             <BuyButton href={product.buyUrl} size="xl" className="mt-5 w-full" productName={product.name} />
-            <ul className="mt-5 grid gap-2 text-sm text-muted-foreground">
+            {product.buyUrl && <ul className="mt-5 grid gap-2 text-sm text-muted-foreground">
               <li className="flex gap-2">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="mt-0.5 shrink-0" aria-hidden><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7a4 4 0 018 0v3" /></svg>
                 Secure checkout by our payment provider. We never see your card or UPI details.
               </li>
 
-            </ul>
+            </ul>}
           </div>
         </div>
       </section>

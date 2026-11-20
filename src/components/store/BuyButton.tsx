@@ -1,8 +1,8 @@
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 type Props = {
-  href: string;
+  href?: string | undefined;
   label?: string;
   size?: "pill" | "xl" | "default";
   className?: string | undefined;
@@ -11,6 +11,7 @@ type Props = {
 
 /** Links to the hosted checkout. No payment data is handled on this site. */
 export function BuyButton({ href, label = "Buy now", size = "pill", className, productName }: Props) {
+  if (!href) return <Button variant="quiet" size={size} className={className} disabled>Coming soon</Button>;
   return (
     <a
       href={href}

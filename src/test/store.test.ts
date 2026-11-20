@@ -11,15 +11,15 @@ describe("store rules", () => {
   it("every product slug is unique and has a checkout link", () => {
     const slugs = products.map((p) => p.slug);
     expect(new Set(slugs).size).toBe(slugs.length);
-    for (const p of products) expect(p.buyUrl).toMatch(/^https:\/\//);
+    for (const p of products) if (p.buyUrl) expect(p.buyUrl).toMatch(/^https:\/\//);
   });
 
   it("returns nothing for an unknown product", () => {
     expect(getProduct("does-not-exist")).toBeUndefined();
   });
 
-  it("lists only the supplied real e-book and no sample bundles", () => {
-    expect(products.map((p) => p.slug)).toEqual(["crack-your-next-interview-with-ai"]);
+  it("lists only the supplied real e-books and no sample bundles", () => {
+    expect(products.map((p) => p.slug)).toEqual(["crack-your-next-interview-with-ai", "excel-for-office-jobs"]);
     expect(bundles).toEqual([]);
   });
 
@@ -51,7 +51,22 @@ describe("store rules", () => {
   });
 
   it("related products never include the current product", () => {
-    expect(getRelatedProducts("crack-your-next-interview-with-ai")).toEqual([]);
+    expect(getRelatedProducts("crack-your-next-interview-with-ai").map((p) => p.slug)).toEqual(["excel-for-office-jobs"]);
+  });
+
+  it("uses the supplied Excel price of 299 rupees", () => {
+    expect(getProduct("excel-for-office-jobs")?.price).toBe(299);
+  });
+
+  it("does not invent an Excel checkout or original price", () => {
+    const excel = getProduct("excel-for-office-jobs");
+    expect(excel).toBeDefined();
+    expect(excel?.buyUrl).toBeUndefined();
+    expect(excel?.originalPrice).toBeUndefined();
+  });
+
+  it("includes the supplied Excel length and practice workbooks", () => {
+    expect(getProduct("excel-for-office-jobs")?.format).toBe("eBook · 215 pages · 20 practice workbooks");
   });
 
   it("search filters by category and text", () => {

@@ -7,11 +7,12 @@ export function Price({
   className,
   large,
 }: {
-  price: number;
+  price?: number | undefined;
   originalPrice?: number | undefined;
   className?: string | undefined;
   large?: boolean;
 }) {
+  if (price === undefined) return <p className={cn("text-sm text-muted-foreground", className)}>Coming soon</p>;
   const onSale = originalPrice !== undefined && originalPrice > price;
   return (
     <p className={cn("flex items-baseline gap-2", className)}>

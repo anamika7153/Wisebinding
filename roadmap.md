@@ -1,5 +1,9 @@
 # Roadmap
 
+- [x] Add Excel for Office Jobs with a burgundy-and-ivory listing design and verify the catalogue
+- [ ] Enable Excel purchasing — awaiting published checkout URL
+- [x] Set the supplied Excel sale price to ₹299
+
 - [x] Storefront: home, products, product pages, about, FAQ, contact, policies, 404
 - [x] Real e-book catalogue, prices in INR
 - [x] Brand finalised as Wisebinding

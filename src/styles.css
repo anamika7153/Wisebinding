@@ -79,11 +79,17 @@
   --color-buy-foreground: var(--buy-foreground);
   --color-surface: var(--surface);
   --color-brand-soft: var(--brand-soft);
+  --color-cover-panel: var(--cover-panel);
+  --color-cover-ink: var(--cover-ink);
+  --color-cover-accent: var(--cover-accent);
   --shadow-soft: var(--shadow-soft-value);
   --shadow-lift: var(--shadow-lift-value);
 }
 
 :root {
+  --cover-panel: oklch(0.34 0.085 15);
+  --cover-ink: oklch(0.96 0.015 85);
+  --cover-accent: oklch(0.81 0.065 25);
   --radius: 0.875rem;
   /* Warm paper background, deep ink text */
   --background: oklch(0.985 0.006 85);
