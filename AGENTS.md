@@ -40,3 +40,4 @@ use the editor.
 - Store product images as CDN asset pointers; keep downloadable e-book files off the storefront because checkout providers own delivery.
 - Use the `supportUrl()` mailto builder for support links so all pages use the visitor’s email app without embedding blocked webmail.
 - Keep Netlify deployment settings in `netlify.toml` with the Netlify Nitro preset and `dist` publish directory; this deploys both SSR pages and static assets without affecting Lovable's managed target.
+- Resolve CDN pointer URLs through `assetUrl()` for product media and branding; external hosts do not serve Lovable's relative asset endpoint, while local icons remain local.

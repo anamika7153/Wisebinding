@@ -30,3 +30,5 @@ Publish from Lovable. Set `site.url` to the actual public domain once available;
 The checked-in `netlify.toml` sets the build command to `bun run build`, the publish directory to `dist` (not `dist/client`), Node.js 22, and the Netlify deployment preset. Repository settings override the old publish directory in Netlify's dashboard.
 
 Deploy the latest commit, then retry the deployment. Nitro generates the page server in `.netlify/functions-internal` and static assets in `dist`; Netlify deploys both automatically. Do not add a single-page-app redirect to `index.html`: product pages, sitemap and robots use the generated server.
+
+CDN image pointers are resolved through `src/lib/assets.ts` to the project's publicly accessible Lovable asset endpoint, so Netlify does not try to serve missing `/__l5e/assets-v1/` files itself. Keep new product images and branding on this helper; the favicon remains a local public file.

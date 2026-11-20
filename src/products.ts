@@ -1,6 +1,7 @@
 import { site } from "./site";
 import cover from "./assets/interview-cover.webp.asset.json";
 import coverThumb from "./assets/interview-cover-640.webp.asset.json";
+import { assetUrl } from "./lib/assets";
 
 export type ProductImage = {
   /** Path under /public, e.g. "/images/my-product.webp" */
@@ -57,7 +58,7 @@ export const products: Product[] = [
     format: "PDF e-book · 195 pages",
     buyUrl: "https://littlefixesco.gumroad.com/l/CrackYourNextInterviewwithAI",
     featured: true,
-    images: [{ src: cover.url, thumb: coverThumb.url, alt: "Crack Your Next Interview with AI by Anamika Yadav — evergreen Wisebinding cover with a golden staircase and AI-inspired lines" }],
+    images: [{ src: assetUrl(cover.url), thumb: assetUrl(coverThumb.url), alt: "Crack Your Next Interview with AI by Anamika Yadav — evergreen Wisebinding cover with a golden staircase and AI-inspired lines" }],
     description: "A practical, step-by-step guide for Indian job seekers who are applying everywhere and hearing nothing back. Hiring has changed: software reads your resume before a person does, recruiters search by keywords, and AI tools may score your first interview. This 195-page eBook shows how that system works and how to use AI to get through every stage of it honestly, from an ATS-friendly resume and a recruiter-ready profile to AI mock interviews, scam safety and offer negotiation. It is built for India, written for beginners, and works with free AI tools.",
     benefits: [
       "Find the exact hiring stage where you’re losing, and fix that first",
