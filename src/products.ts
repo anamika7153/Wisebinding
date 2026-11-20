@@ -1,6 +1,8 @@
 import { site } from "./site";
 import cover from "./assets/interview-cover.webp.asset.json";
 import coverThumb from "./assets/interview-cover-640.webp.asset.json";
+import excelPhoto from "./assets/excel-book-tablet.webp.asset.json";
+import excelPhotoThumb from "./assets/excel-book-tablet-640.webp.asset.json";
 import { assetUrl } from "./lib/assets";
 
 export type ProductImage = {
@@ -103,8 +105,7 @@ export const products: Product[] = [
     tagline: "100 Formulas, MIS Reports & Shortcuts (with practice files)",
     category: "Career / Office Skills",
     format: "eBook · 215 pages · 20 practice workbooks",
-    images: [],
-    artwork: "spreadsheet",
+    images: [{ src: assetUrl(excelPhoto.url), thumb: assetUrl(excelPhotoThumb.url), alt: "Excel for Office Jobs by Anamika Yadav — burgundy and ivory book and tablet photographed on a softly lit tabletop" }],
     description: "Excel is the shared language of office work, yet most people learn it in bits and pieces, under pressure. This book gives you the missing structure. It teaches the 100 formulas, the keyboard shortcuts, the pivot tables and the MIS reporting skills that office jobs actually ask for, with Indian examples such as GST, lakhs and crores, PF, EMI and the April–March financial year. Written for freshers, MIS and data-entry executives, people in accounts, HR and sales operations, small-business owners and career switchers, it takes you from Excel stress to Excel confidence. Every chapter comes with its own practice workbook, so you learn by doing.",
     benefits: [
       "Write the formulas office work needs, from SUMIFS and lookups to dates and text cleaning, with confidence",
