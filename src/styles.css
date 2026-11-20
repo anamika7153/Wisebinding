@@ -90,6 +90,11 @@
   --cover-panel: oklch(0.34 0.085 15);
   --cover-ink: oklch(0.96 0.015 85);
   --cover-accent: oklch(0.81 0.065 25);
+  --book-spine: oklch(0.26 0.07 15);
+  --book-pages: oklch(0.92 0.018 85);
+  --book-page-rule: oklch(0.8 0.02 85);
+  --book-shadow: oklch(0.22 0.025 15 / 0.25);
+  --book-highlight: oklch(0.98 0.01 85 / 0.1);
   --radius: 0.875rem;
   /* Warm paper background, deep ink text */
   --background: oklch(0.985 0.006 85);
@@ -221,6 +226,43 @@
     text-underline-offset: 3px;
   }
 }
+
+.book-scene {
+  container-type: inline-size;
+  perspective: 1200px;
+}
+
+.book-mockup {
+  position: relative;
+  width: 46%;
+  height: 82%;
+  transform: rotate(-6deg) rotateY(-14deg);
+  transform-style: preserve-3d;
+  box-shadow: 1.5cqw 2.5cqw 3cqw var(--book-shadow);
+}
+
+.book-mockup::before {
+  content: "";
+  position: absolute;
+  inset: 1.5% -5% 1.5% 95%;
+  background: repeating-linear-gradient(to right, var(--book-pages) 0 2px, var(--book-page-rule) 2px 3px);
+  transform: skewY(-12deg);
+  border-right: 2px solid var(--book-spine);
+}
+
+.book-cover {
+  position: relative;
+  padding: 4.2cqw 3.5cqw 3.5cqw 5cqw;
+  border-radius: 2px 4px 4px 2px;
+  border-left: 1.5cqw solid var(--book-spine);
+  background-image: linear-gradient(to right, var(--book-highlight), transparent 12%);
+  box-shadow: inset 1px 0 var(--book-highlight);
+}
+
+.book-imprint, .book-author { font-size: 2cqw; }
+.book-title { font-size: 5.2cqw; }
+.book-subtitle { font-size: 2.1cqw; }
+.book-illustration { width: 55%; max-height: 35%; }
 
 /* Fade-in on load, and on scroll where supported. Pure CSS, no JS. */
 @keyframes fade-up {
