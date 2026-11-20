@@ -1,13 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { buttonVariants } from "@/components/ui/button";
 import { FaqList } from "@/components/store/FaqList";
-import {
-  AboutBlock,
-  FeaturedOffer,
-  HowItWorks,
-  PasBlock,
-  SocialProof,
-} from "@/components/store/HomeSections";
+import { AboutBlock, FeaturedOffer, HowItWorks, PasBlock, SocialProof } from "@/components/store/HomeSections";
 import { Newsletter } from "@/components/store/Newsletter";
 import { ProductBrowser } from "@/components/store/ProductBrowser";
 import { SectionHeading } from "@/components/store/Section";

@@ -61,8 +61,15 @@ export const products: Product[] = [
     format: "PDF e-book · 195 pages",
     buyUrl: "https://littlefixesco.gumroad.com/l/CrackYourNextInterviewwithAI",
     featured: true,
-    images: [{ src: assetUrl(cover.url), thumb: assetUrl(coverThumb.url), alt: "Crack Your Next Interview with AI by Anamika Yadav — evergreen Wisebinding cover with a golden staircase and AI-inspired lines" }],
-    description: "A practical, step-by-step guide for Indian job seekers who are applying everywhere and hearing nothing back. Hiring has changed: software reads your resume before a person does, recruiters search by keywords, and AI tools may score your first interview. This 195-page eBook shows how that system works and how to use AI to get through every stage of it honestly, from an ATS-friendly resume and a recruiter-ready profile to AI mock interviews, scam safety and offer negotiation. It is built for India, written for beginners, and works with free AI tools.",
+    images: [
+      {
+        src: assetUrl(cover.url),
+        thumb: assetUrl(coverThumb.url),
+        alt: "Crack Your Next Interview with AI by Anamika Yadav — evergreen Wisebinding cover with a golden staircase and AI-inspired lines",
+      },
+    ],
+    description:
+      "A practical, step-by-step guide for Indian job seekers who are applying everywhere and hearing nothing back. Hiring has changed: software reads your resume before a person does, recruiters search by keywords, and AI tools may score your first interview. This 195-page eBook shows how that system works and how to use AI to get through every stage of it honestly, from an ATS-friendly resume and a recruiter-ready profile to AI mock interviews, scam safety and offer negotiation. It is built for India, written for beginners, and works with free AI tools.",
     benefits: [
       "Find the exact hiring stage where you’re losing, and fix that first",
       "Build a clean, ATS-friendly resume that both software and recruiters can read",
@@ -89,24 +96,50 @@ export const products: Product[] = [
       "Cheat sheets: ATS checklist, action verbs, AI prompt library, top 30 HR questions, video interview setup, interview-day checklist, scam red flags and negotiation scripts",
     ],
     faqs: [
-      { q: "What format is the eBook in?", a: "A 195-page PDF with a clickable Contents page and bookmarks for every chapter. It works on phone, tablet and laptop." },
-      { q: "Do I need to be technical?", a: "No. If you can use WhatsApp and a web browser, you can use every tool in this book." },
-      { q: "Do I need paid AI tools?", a: "No. Every strategy works with free AI tiers, free learning platforms and a simple spreadsheet." },
-      { q: "I’m a fresher. Is this for me?", a: "Yes. It covers campus hiring, online assessments, projects and building your first resume." },
-      { q: "Isn’t using AI for job applications cheating?", a: "Not the way this book teaches it. You use AI to prepare and sharpen your real experience, never to invent skills or to answer during a live test or interview." },
-      { q: "Does this guarantee a job?", a: "No book can promise that. It gives you a clear system to find where you’re getting stuck, fix it, and walk into every interview prepared." },
+      {
+        q: "What format is the eBook in?",
+        a: "A 195-page PDF with a clickable Contents page and bookmarks for every chapter. It works on phone, tablet and laptop.",
+      },
+      {
+        q: "Do I need to be technical?",
+        a: "No. If you can use WhatsApp and a web browser, you can use every tool in this book.",
+      },
+      {
+        q: "Do I need paid AI tools?",
+        a: "No. Every strategy works with free AI tiers, free learning platforms and a simple spreadsheet.",
+      },
+      {
+        q: "I’m a fresher. Is this for me?",
+        a: "Yes. It covers campus hiring, online assessments, projects and building your first resume.",
+      },
+      {
+        q: "Isn’t using AI for job applications cheating?",
+        a: "Not the way this book teaches it. You use AI to prepare and sharpen your real experience, never to invent skills or to answer during a live test or interview.",
+      },
+      {
+        q: "Does this guarantee a job?",
+        a: "No book can promise that. It gives you a clear system to find where you’re getting stuck, fix it, and walk into every interview prepared.",
+      },
     ],
   },
   {
     slug: "excel-for-office-jobs",
     price: 299,
+    buyUrl: "https://littlefixesco.gumroad.com/l/aajloa",
     name: "Excel for Office Jobs",
     author: "Anamika Yadav",
     tagline: "100 Formulas, MIS Reports & Shortcuts (with practice files)",
     category: "Career / Office Skills",
     format: "eBook · 215 pages · 20 practice workbooks",
-    images: [{ src: assetUrl(excelPhoto.url), thumb: assetUrl(excelPhotoThumb.url), alt: "Excel for Office Jobs by Anamika Yadav — burgundy and ivory book and tablet photographed on a softly lit tabletop" }],
-    description: "Excel is the shared language of office work, yet most people learn it in bits and pieces, under pressure. This book gives you the missing structure. It teaches the 100 formulas, the keyboard shortcuts, the pivot tables and the MIS reporting skills that office jobs actually ask for, with Indian examples such as GST, lakhs and crores, PF, EMI and the April–March financial year. Written for freshers, MIS and data-entry executives, people in accounts, HR and sales operations, small-business owners and career switchers, it takes you from Excel stress to Excel confidence. Every chapter comes with its own practice workbook, so you learn by doing.",
+    images: [
+      {
+        src: assetUrl(excelPhoto.url),
+        thumb: assetUrl(excelPhotoThumb.url),
+        alt: "Excel for Office Jobs by Anamika Yadav — burgundy and ivory book and tablet photographed on a softly lit tabletop",
+      },
+    ],
+    description:
+      "Excel is the shared language of office work, yet most people learn it in bits and pieces, under pressure. This book gives you the missing structure. It teaches the 100 formulas, the keyboard shortcuts, the pivot tables and the MIS reporting skills that office jobs actually ask for, with Indian examples such as GST, lakhs and crores, PF, EMI and the April–March financial year. Written for freshers, MIS and data-entry executives, people in accounts, HR and sales operations, small-business owners and career switchers, it takes you from Excel stress to Excel confidence. Every chapter comes with its own practice workbook, so you learn by doing.",
     benefits: [
       "Write the formulas office work needs, from SUMIFS and lookups to dates and text cleaning, with confidence",
       "Fix #N/A, #VALUE! and #REF! errors in minutes instead of panicking",
@@ -129,11 +162,26 @@ export const products: Product[] = [
       "100 Formulas Quick Reference, keyboard shortcuts, error fix-it sheet, formula selection guide, Indian number formats and 25 practice challenges",
     ],
     faqs: [
-      { q: "Do I need to be good at Excel already?", a: "No. The book starts with the basics and builds up. If you can use a computer and type a few words, you can follow it." },
-      { q: "Which Excel version do I need?", a: "Most of the book works in any modern version. Formulas that need Microsoft 365 or Excel 2021 or later are clearly marked, with alternatives for older versions." },
-      { q: "Does it work on Excel for Mac or Google Sheets?", a: "The book is written for Microsoft Excel on Windows, with Mac shortcuts included. Most formulas also work in Excel for the web. Google Sheets is not the focus." },
-      { q: "Are the practice files included?", a: "Yes. Every chapter has its own practice workbook with a Start, Solution and Challenge sheet." },
-      { q: "I'm a fresher. Is this for me?", a: "Yes. It explains what job posts mean by Basic, Intermediate and Advanced Excel, and ends with a mock Excel test and interview preparation." },
+      {
+        q: "Do I need to be good at Excel already?",
+        a: "No. The book starts with the basics and builds up. If you can use a computer and type a few words, you can follow it.",
+      },
+      {
+        q: "Which Excel version do I need?",
+        a: "Most of the book works in any modern version. Formulas that need Microsoft 365 or Excel 2021 or later are clearly marked, with alternatives for older versions.",
+      },
+      {
+        q: "Does it work on Excel for Mac or Google Sheets?",
+        a: "The book is written for Microsoft Excel on Windows, with Mac shortcuts included. Most formulas also work in Excel for the web. Google Sheets is not the focus.",
+      },
+      {
+        q: "Are the practice files included?",
+        a: "Yes. Every chapter has its own practice workbook with a Start, Solution and Challenge sheet.",
+      },
+      {
+        q: "I'm a fresher. Is this for me?",
+        a: "Yes. It explains what job posts mean by Basic, Intermediate and Advanced Excel, and ends with a mock Excel test and interview preparation.",
+      },
     ],
   },
 ];
@@ -150,9 +198,7 @@ export function getCategories(list: Product[] = products): string[] {
 }
 
 export function getBundleProducts(bundle: Bundle): Product[] {
-  return bundle.productSlugs
-    .map((slug) => getProduct(slug))
-    .filter((p): p is Product => Boolean(p));
+  return bundle.productSlugs.map((slug) => getProduct(slug)).filter((p): p is Product => Boolean(p));
 }
 
 /** What the bundle's products cost if bought separately at their current prices. */
@@ -184,9 +230,6 @@ export function searchProducts(list: Product[], query: string, category: string 
   return list.filter((p) => {
     if (category && p.category !== category) return false;
     if (!q) return true;
-    return [p.name, p.tagline, p.category, p.description, p.format]
-      .join(" ")
-      .toLowerCase()
-      .includes(q);
+    return [p.name, p.tagline, p.category, p.description, p.format].join(" ").toLowerCase().includes(q);
   });
 }
