@@ -1,17 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { site } from "@/site";
+import logo from "@/assets/wisebinding-logo.webp.asset.json";
 
 export function Logo() {
   return (
-    <Link to="/" className="group inline-flex items-center gap-2.5" aria-label={`${site.brand} home`}>
-      <span
-        aria-hidden
-        className="grid size-8 place-items-center rounded-full bg-primary font-display text-base text-primary-foreground transition-transform group-hover:-rotate-6"
-      >
-        {site.brand.charAt(0)}
-      </span>
-      <span className="font-display text-lg font-medium tracking-tight">{site.brand}</span>
+    <Link to="/" className="inline-flex items-center" aria-label={`${site.brand} home`}>
+      <img src={logo.url} alt={site.brand} width={481} height={96} className="h-9 w-auto" />
     </Link>
   );
 }
