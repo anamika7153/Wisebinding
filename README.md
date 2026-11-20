@@ -24,3 +24,9 @@ bunx vitest run
 ```
 
 Publish from Lovable. Set `site.url` to the actual public domain once available; never use a repository URL as the store domain.
+
+### Netlify
+
+The checked-in `netlify.toml` sets the build command to `bun run build`, the publish directory to `dist` (not `dist/client`), Node.js 22, and the Netlify deployment preset. Repository settings override the old publish directory in Netlify's dashboard.
+
+Deploy the latest commit, then retry the deployment. Nitro generates the page server in `.netlify/functions-internal` and static assets in `dist`; Netlify deploys both automatically. Do not add a single-page-app redirect to `index.html`: product pages, sitemap and robots use the generated server.

@@ -11,3 +11,4 @@
 - [x] Rebrand to Wisebinding and Anamika Yadav; generalise store copy and add Gmail support
 - [x] Remove refund content and replace placeholder policies with factual static-store disclosures
 - [x] Verify catalogue, checkout, support links and mobile layout
+- [x] Correct Netlify deployment preset and publish directory; document redeployment
