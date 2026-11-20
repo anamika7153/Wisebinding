@@ -125,6 +125,7 @@ export const products: Product[] = [
   {
     slug: "excel-for-office-jobs",
     price: 299,
+    originalPrice: 599,
     buyUrl: "https://littlefixesco.gumroad.com/l/aajloa",
     name: "Excel for Office Jobs",
     author: "Anamika Yadav",
