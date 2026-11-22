@@ -59,7 +59,7 @@ export const products: Product[] = [
     price: 499,
     originalPrice: 1999,
     format: "PDF e-book · 195 pages",
-    buyUrl: "https://littlefixesco.gumroad.com/l/CrackYourNextInterviewwithAI",
+    buyUrl: "https://superprofile.bio/vp/crack-your-next-interview-with-ai",
     featured: true,
     images: [
       {
@@ -126,7 +126,7 @@ export const products: Product[] = [
     slug: "excel-for-office-jobs",
     price: 299,
     originalPrice: 599,
-    buyUrl: "https://littlefixesco.gumroad.com/l/aajloa",
+    buyUrl: "https://superprofile.bio/vp/excel-for-office-jobs",
     name: "Excel for Office Jobs",
     author: "Anamika Yadav",
     tagline: "100 Formulas, MIS Reports & Shortcuts (with practice files)",
