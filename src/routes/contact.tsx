@@ -20,22 +20,32 @@ function ContactPage() {
       <PageIntro eyebrow="Contact" title="Contact Anamika Yadav." text={site.supportResponse} />
       <div className="container-page mt-6 grid gap-6 md:grid-cols-2">
         <div className="rounded-3xl border border-border bg-card p-8 shadow-soft">
-          <h2 className="text-2xl">Email us</h2>
+          <h2 className="text-2xl">Message on Instagram</h2>
           <p className="mt-2 text-muted-foreground">
-            For order help or questions about an e-book before you buy.
+            Reach out via direct message on Instagram for order questions or pre-purchase inquiries.
           </p>
-          <a href={supportUrl()} className={`${buttonVariants({ variant: "brand", size: "xl" })} mt-6`}>
-            Email support
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={supportUrl()}
+            className={`${buttonVariants({ variant: "brand", size: "xl" })} mt-6`}
+          >
+            Message @wisebinding
           </a>
         </div>
         <div className="rounded-3xl bg-surface p-8">
           <h2 className="text-2xl">Before you write</h2>
           <ul className="mt-4 space-y-3 text-muted-foreground">
-            <li>Can't find your download? Check your receipt and spam folder for the email from the checkout provider.</li>
+            <li>
+              Can't find your download? Check your receipt and spam folder for the email from the checkout provider.
+            </li>
             <li>Include the e-book title and your order reference if you have one. Do not send payment details.</li>
             <li>
               Common questions are answered on our{" "}
-              <Link to="/faq" className="text-primary underline underline-offset-4">FAQ page</Link>.
+              <Link to="/faq" className="text-primary underline underline-offset-4">
+                FAQ page
+              </Link>
+              .
             </li>
           </ul>
         </div>
