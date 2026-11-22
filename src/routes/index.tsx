@@ -88,7 +88,7 @@ function Home() {
               <>
                 Still unsure?{" "}
                 <a className="text-primary underline underline-offset-4" href={supportUrl()}>
-                  Message us on Instagram.
+                  Message us on Instagram
                 </a>
                 .
               </>
