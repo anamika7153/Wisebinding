@@ -12,6 +12,8 @@ export function SiteFooter() {
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{site.tagline}</p>
           <a
             href={supportUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
           >
             Instagram support
