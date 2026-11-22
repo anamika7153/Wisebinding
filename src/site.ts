@@ -95,7 +95,7 @@ export const site = {
 
 /** Opens the visitor’s configured email app without loading a webmail page. */
 export function supportUrl(): string {
-  return `mailto:${site.instagramUrl}`;
+  return site.instagramUrl;
 }
 
 export function fill(text: string): string {
