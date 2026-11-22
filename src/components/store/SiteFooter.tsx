@@ -14,7 +14,7 @@ export function SiteFooter() {
             href={supportUrl()}
             className="mt-4 inline-block text-sm font-medium text-primary underline-offset-4 hover:underline"
           >
-            Email support
+            Instagram support
           </a>
         </div>
         <nav aria-label="Store">
@@ -32,8 +32,16 @@ export function SiteFooter() {
         <nav aria-label="Policies">
           <h2 className="font-sans text-sm font-semibold text-foreground">Policies</h2>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/privacy" className="hover:text-foreground">Privacy policy</Link></li>
-            <li><Link to="/terms" className="hover:text-foreground">Terms of sale</Link></li>
+            <li>
+              <Link to="/privacy" className="hover:text-foreground">
+                Privacy policy
+              </Link>
+            </li>
+            <li>
+              <Link to="/terms" className="hover:text-foreground">
+                Terms of sale
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
