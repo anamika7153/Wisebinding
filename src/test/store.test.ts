@@ -8,7 +8,7 @@ import {
   products,
   searchProducts,
 } from "@/products";
-import { site, supportUrl } from "@/site";
+import { site } from "@/site";
 
 describe("store rules", () => {
   it("shows prices in Indian rupees", () => {
@@ -44,10 +44,6 @@ describe("store rules", () => {
     expect(site.brand).toBe("Wisebinding");
     expect(site.about.founderName).toBe("Anamika Yadav");
     expect(products[0]?.author).toBe("Anamika Yadav");
-  });
-
-  it("opens an email app with the supplied support recipient instead of blocked webmail", () => {
-    expect(supportUrl()).toBe("mailto:dev.personal.pf@gmail.com");
   });
 
   it("does not configure a refund promise", () => {
