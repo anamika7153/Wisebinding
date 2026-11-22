@@ -23,7 +23,7 @@ function FaqPage() {
         <p className="mt-8 text-muted-foreground">
           Didn't find your answer?{" "}
           <a href={supportUrl()} className="font-medium text-primary underline underline-offset-4">
-            Email support
+            Message us on Instagram.
           </a>
           . {site.supportResponse}
         </p>
