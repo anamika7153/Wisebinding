@@ -8,7 +8,7 @@ export const Route = createFileRoute("/contact")({
   head: () =>
     seo({
       title: "Contact us",
-      description: `Questions about an order or a guide? Email ${site.brand} and a real person will reply. ${site.supportResponse}`,
+      description: `Questions about an order or a guide? Message ${site.brand} and a real person will reply. ${site.supportResponse}`,
       path: "/contact",
     }),
   component: ContactPage,
