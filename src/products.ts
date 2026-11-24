@@ -53,7 +53,6 @@ export const products: Product[] = [
   {
     slug: "crack-your-next-interview-with-ai",
     name: "Crack Your Next Interview with AI",
-    author: "Anamika Yadav",
     tagline: "ATS Resumes, AI Mock Interviews & Smarter Job Search for Indian Job Seekers",
     category: "Career & Job Search",
     price: 499,
@@ -65,7 +64,7 @@ export const products: Product[] = [
       {
         src: "/images/interview-cover.webp",
         thumb: "/images/interview-cover-640.webp",
-        alt: "Crack Your Next Interview with AI by Anamika Yadav — evergreen Wisebinding cover with a golden staircase and AI-inspired lines",
+        alt: "Crack Your Next Interview with AI — evergreen Wisebinding cover with a golden staircase and AI-inspired lines",
       },
     ],
     description:
@@ -128,7 +127,6 @@ export const products: Product[] = [
     originalPrice: 599,
     buyUrl: "https://superprofile.bio/vp/excel-for-office-jobs",
     name: "Excel for Office Jobs",
-    author: "Anamika Yadav",
     tagline: "100 Formulas, MIS Reports & Shortcuts (with practice files)",
     category: "Career / Office Skills",
     format: "eBook · 215 pages · 20 practice workbooks",
@@ -136,7 +134,7 @@ export const products: Product[] = [
       {
         src: "/images/excel-book-tablet.webp",
         thumb: "/images/excel-book-tablet-640.webp",
-        alt: "Excel for Office Jobs by Anamika Yadav — burgundy and ivory book and tablet photographed on a softly lit tabletop",
+        alt: "Excel for Office Jobs — burgundy and ivory book and tablet photographed on a softly lit tabletop",
       },
     ],
     description:
