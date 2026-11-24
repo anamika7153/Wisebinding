@@ -14,8 +14,8 @@ export const Route = createFileRoute("/privacy")({
     <PolicyPage title="Privacy policy">
       <h2>About this website</h2>
       <p>
-        {site.brand} is an e-book storefront run by Anamika Yadav. You do not create an account here, and this site does
-        not collect payment details.
+        {site.brand} is an independent e-book storefront. You do not create an account here, and this site does not
+        collect payment details.
       </p>
       <h2>Checkout and digital delivery</h2>
       <p>
@@ -24,8 +24,8 @@ export const Route = createFileRoute("/privacy")({
       </p>
       <h2>Support by Instagram</h2>
       <p>
-        If you send a support message, Anamika Yadav receives the information you choose to include and uses it to
-        respond to your enquiry. Do not send passwords or card details.
+        If you send a support message, Wisebinding receives the information you choose to include and uses it to respond
+        to your enquiry. Do not send passwords or card details.
       </p>
       <h2>Analytics and hosting</h2>
       <p>
