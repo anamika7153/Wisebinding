@@ -14,7 +14,7 @@ export const Route = createFileRoute("/terms")({
     <PolicyPage title="Terms of sale">
       <h2>About Wisebinding</h2>
       <p>
-        {site.brand} is an e-book store by Anamika Yadav. Each title’s page lists its description, format, contents and
+        {site.brand} is an independent e-book storefront. Each title’s page lists its description, format, contents and
         price.
       </p>
       <h2>Purchases</h2>
