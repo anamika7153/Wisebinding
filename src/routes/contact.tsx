@@ -17,7 +17,7 @@ export const Route = createFileRoute("/contact")({
 function ContactPage() {
   return (
     <>
-      <PageIntro eyebrow="Contact" title="Contact Anamika Yadav." text={site.supportResponse} />
+      <PageIntro eyebrow="Contact" title="Contact Wisebinding" text={site.supportResponse} />
       <div className="container-page mt-6 grid gap-6 md:grid-cols-2">
         <div className="rounded-3xl border border-border bg-card p-8 shadow-soft">
           <h2 className="text-2xl">Message on Instagram</h2>
