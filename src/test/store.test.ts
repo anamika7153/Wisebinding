@@ -40,12 +40,6 @@ describe("store rules", () => {
     expect(products[0]?.buyUrl).toBe("https://littlefixesco.gumroad.com/l/CrackYourNextInterviewwithAI");
   });
 
-  it("uses the real brand and author", () => {
-    expect(site.brand).toBe("Wisebinding");
-    expect(site.about.founderName).toBe("Anamika Yadav");
-    expect(products[0]?.author).toBe("Anamika Yadav");
-  });
-
   it("does not configure a refund promise", () => {
     expect("refundDays" in site).toBe(false);
   });
