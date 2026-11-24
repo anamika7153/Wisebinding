@@ -22,7 +22,7 @@ export const site = {
     { title: "Digital delivery", text: "Access your purchase through the checkout provider." },
     { title: "Hosted checkout", text: "Payment is handled on the provider’s website, not here." },
     { title: "Explore your interests", text: "E-books across topics, for different reading journeys." },
-    { title: "Direct support", text: "Questions? Get in touch with Anamika Yadav." },
+    { title: "Direct support", text: "Questions? Message us directly on Instagram." },
   ],
   pas: {
     eyebrow: "Follow your curiosity",
