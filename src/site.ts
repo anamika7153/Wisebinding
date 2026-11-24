@@ -22,7 +22,7 @@ export const site = {
     { title: "Digital delivery", text: "Access your purchase through the checkout provider." },
     { title: "Hosted checkout", text: "Payment is handled on the provider’s website, not here." },
     { title: "Explore your interests", text: "E-books across topics, for different reading journeys." },
-    { title: "Author support", text: "Questions? Get in touch with Anamika Yadav." },
+    { title: "Direct support", text: "Questions? Get in touch with Anamika Yadav." },
   ],
   pas: {
     eyebrow: "Follow your curiosity",
@@ -43,16 +43,16 @@ export const site = {
   testimonials: [] as { quote: string; name: string; role?: string }[],
   firstCustomers: {
     title: "Your reading journey starts here",
-    text: "Explore the e-book details, see what’s inside, and choose the read that’s right for you. Have a question? Anamika Yadav is just an Instagram DM away.",
+    text: "Explore the e-book details, see what’s inside, and choose the read that’s right for you. Have a question? We’re just an Instagram DM away.",
   },
   about: {
     eyebrow: "Behind Wisebinding",
-    title: "Meet Anamika Yadav.",
-    founderName: "Anamika Yadav",
-    founderRole: "Author · Wisebinding",
+    title: "About Wisebinding.",
+    founderName: "Wisebinding",
+    founderRole: "Independent Digital Publishing",
     body: [
-      "I’m Anamika Yadav, the author behind Wisebinding. This is where you’ll find my e-books and guides.",
-      "Wisebinding isn’t limited to one subject or one audience. Each e-book has its own focus, with details to help you decide whether it’s for you.",
+      "Wisebinding is an independent publishing imprint creating practical, high-value guides and digital tools.",
+      "Wisebinding isn’t limited to one subject or one audience. Each title is crafted with clear, actionable knowledge to help you master new skills without the fluff.",
     ],
   },
   faqs: [
