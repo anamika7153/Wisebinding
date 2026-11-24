@@ -63,8 +63,8 @@ export const products: Product[] = [
     featured: true,
     images: [
       {
-        src: assetUrl(cover.url),
-        thumb: assetUrl(coverThumb.url),
+        src: /images/interview-cover.webp,
+        thumb: /images/interview-cover-640.webp,
         alt: "Crack Your Next Interview with AI by Anamika Yadav — evergreen Wisebinding cover with a golden staircase and AI-inspired lines",
       },
     ],
