@@ -63,8 +63,8 @@ export const products: Product[] = [
     featured: true,
     images: [
       {
-        src: /images/interview-cover.webp,
-        thumb: /images/interview-cover-640.webp,
+        src: "/images/interview-cover.webp",
+        thumb: "/images/interview-cover-640.webp",
         alt: "Crack Your Next Interview with AI by Anamika Yadav — evergreen Wisebinding cover with a golden staircase and AI-inspired lines",
       },
     ],
@@ -134,8 +134,8 @@ export const products: Product[] = [
     format: "eBook · 215 pages · 20 practice workbooks",
     images: [
       {
-        src: assetUrl(excelPhoto.url),
-        thumb: assetUrl(excelPhotoThumb.url),
+        src: "/images/excel-book-tablet.webp",
+        thumb: "/images/excel-book-tablet-640.webp",
         alt: "Excel for Office Jobs by Anamika Yadav — burgundy and ivory book and tablet photographed on a softly lit tabletop",
       },
     ],
