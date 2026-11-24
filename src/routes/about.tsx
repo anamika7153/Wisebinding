@@ -10,7 +10,7 @@ export const Route = createFileRoute("/about")({
   head: () =>
     seo({
       title: "About us",
-      description: `${site.brand} is an independent e-book store by Anamika Yadav. ${site.mission}`.slice(0, 158),
+      description: `${site.brand} is an independent digital bookstore. ${site.mission}`.slice(0, 158),
       path: "/about",
     }),
   component: AboutPage,
